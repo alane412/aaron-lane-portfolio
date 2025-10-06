@@ -55,10 +55,14 @@ section {
 
 /* ---- Thumbnail Image ---- */
 .project-card img {
-  width: 100%;                /* fill the card width */
-  height: 160px;              /* fixed thumbnail height */
-  object-fit: cover;          /* crop/zoom to fit */
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
 
 /* ---- Title & Description ---- */
 .project-card h3 {
