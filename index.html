@@ -20,7 +20,7 @@
 
   <!-- === Intro Modal === -->
   <div id="introModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-box">
       <span class="close" onclick="closeModal('introModal')">&times;</span>
       <img src="images/headshot.jpg" alt="Photo of Aaron Lane" class="profile-photo">
       <h2>About Me</h2>
@@ -32,7 +32,7 @@
 
   <!-- === Projects Modal === -->
   <div id="projectsModal" class="modal">
-    <div class="modal-content large">
+    <div class="modal-box large">
       <span class="close" onclick="closeModal('projectsModal')">&times;</span>
       <h2>Projects</h2>
       <div class="projects-grid">
@@ -59,22 +59,23 @@
 
   <!-- === Resume Modal === -->
   <div id="resumeModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-box">
       <span class="close" onclick="closeModal('resumeModal')">&times;</span>
       <h2>Resume</h2>
-      <p>You can view my resume directly below or <a href="resume.pdf" target="_blank">download the PDF</a>.</p>
+      <p>You can view my resume below or <a href="resume.pdf" target="_blank">download the PDF</a>.</p>
       <iframe src="resume.pdf" class="resume-frame"></iframe>
     </div>
   </div>
 
   <script>
     function openModal(id) {
-      document.getElementById(id).style.display = "flex";
-      document.body.style.overflow = "hidden"; // prevent background scroll
+      const modal = document.getElementById(id);
+      modal.classList.add("show");
     }
+
     function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-      document.body.style.overflow = "auto";
+      const modal = document.getElementById(id);
+      modal.classList.remove("show");
     }
   </script>
 </body>
