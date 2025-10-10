@@ -1,54 +1,18 @@
-/* ---- Global Styles ---- */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #f8f9fc;
+  background: linear-gradient(145deg, #1f3c88, #4f6dd6);
   color: #333;
-}
-
-/* ---- Header ---- */
-header {
-  background: #1f3c88;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-h1 {
-  margin: 0.2rem 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-nav {
-  margin-top: 0.4rem;
-}
-
-nav a {
-  margin: 0 1rem;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
-}
-
-nav a:hover,
-nav a.active {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 
 /* ---- Landing Page ---- */
 .landing-page {
-  background: linear-gradient(145deg, #1f3c88, #4f6dd6);
   color: white;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden;
 }
 
 .landing-container {
@@ -83,6 +47,8 @@ nav a.active {
   font-weight: 600;
   letter-spacing: 0.3px;
   transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -92,61 +58,81 @@ nav a.active {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* ---- Intro Page ---- */
-.intro {
-  text-align: center;
-  padding: 4rem 1rem;
-  animation: fadeIn 1s ease;
+/* ---- Modal Base ---- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
 }
 
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1.5rem;
+.modal-content {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 85vh;
+  position: relative;
+  animation: slideUp 0.4s ease;
 }
 
-.intro h2 {
+.modal-content.large {
+  max-width: 1000px;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover {
   color: #1f3c88;
-  font-size: 1.9rem;
+}
+
+/* ---- Inside Modal ---- */
+.modal-content h2 {
+  color: #1f3c88;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.intro p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto 1rem;
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
 }
 
-.intro a {
-  color: #1f3c88;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.intro a:hover {
-  text-decoration: underline;
-}
-
-/* ---- Projects Grid ---- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  margin-top: 1rem;
 }
 
 .project-card {
-  background: white;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -154,35 +140,48 @@ nav a.active {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
   max-height: 180px;
   object-fit: contain;
-  display: block;
-  background: #f4f6ff;
+  background: #f5f6fa;
 }
 
 .project-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
   color: #1f3c88;
+  font-size: 1.1rem;
+  margin: 0.8rem 0 0.3rem;
 }
 
 .project-card p {
-  padding: 0 1rem 1.5rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
+  padding: 0 0.8rem 1rem;
 }
 
-/* ---- Animation ---- */
+/* ---- Resume Embed ---- */
+.resume-frame {
+  width: 100%;
+  height: 70vh;
+  border-radius: 8px;
+  border: none;
+  margin-top: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Animations ---- */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* ---- Responsive ---- */
@@ -193,16 +192,11 @@ nav a.active {
   }
 
   .landing-btn {
-    display: inline-block;
     width: 75%;
   }
 
-  .landing-name {
-    font-size: 2.3rem;
-  }
-
   .profile-photo {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
   }
 }

@@ -12,10 +12,70 @@
     <p class="landing-tagline">Bioinformatician • Educator • Data Scientist</p>
 
     <div class="landing-links">
-      <a href="intro.html" class="landing-btn">Intro</a>
-      <a href="projects.html" class="landing-btn">Projects</a>
-      <a href="resume.html" class="landing-btn">Resume</a>
+      <button class="landing-btn" onclick="openModal('introModal')">Intro</button>
+      <button class="landing-btn" onclick="openModal('projectsModal')">Projects</button>
+      <button class="landing-btn" onclick="openModal('resumeModal')">Resume</button>
     </div>
   </main>
+
+  <!-- === Intro Modal === -->
+  <div id="introModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('introModal')">&times;</span>
+      <img src="images/headshot.jpg" alt="Photo of Aaron Lane" class="profile-photo">
+      <h2>About Me</h2>
+      <p>Hi, I’m Aaron — a bioinformatician and educator passionate about data. 
+         I build data pipelines, dashboards, and machine learning models to make data of all kinds more actionable.</p>
+      <p>Explore my recent work below or download my <a href="resume.pdf" target="_blank">resume</a>.</p>
+    </div>
+  </div>
+
+  <!-- === Projects Modal === -->
+  <div id="projectsModal" class="modal">
+    <div class="modal-content large">
+      <span class="close" onclick="closeModal('projectsModal')">&times;</span>
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <a class="project-card" href="https://doi.org/10.1016/j.vaccine.2025.127677" target="_blank">
+          <img src="images/Vaccine_journal_screenshot.png" alt="Journal Article Thumbnail">
+          <h3>Long-Term Influenza Vaccine Responses</h3>
+          <p>First-author computational study on influenza vaccine response dynamics, published in <em>Vaccine</em> (2025).</p>
+        </a>
+
+        <a class="project-card" href="https://github.com/alane412/notebook-comment-translator" target="_blank">
+          <img src="images/notebook-comment-translator_thumbnail.png" alt="Translator Thumbnail">
+          <h3>Jupyter Notebook Comment Translator</h3>
+          <p>Translate markdown cells and Python # comments in Jupyter notebooks while leaving code intact.</p>
+        </a>
+
+        <a class="project-card" href="https://github.com/alane412/influenza-gtrends-dashboard" target="_blank">
+          <img src="images/flu_dashboard_thumbnail.png" alt="Flu Dashboard Thumbnail">
+          <h3>Predicting Flu Cases with Google Search Trends</h3>
+          <p>Interactive dashboard predicting influenza-like illness rates using Google search data.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Resume Modal === -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('resumeModal')">&times;</span>
+      <h2>Resume</h2>
+      <p>You can view my resume directly below or <a href="resume.pdf" target="_blank">download the PDF</a>.</p>
+      <iframe src="resume.pdf" class="resume-frame"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
 </body>
 </html>
