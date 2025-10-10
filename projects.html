@@ -2,52 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Aaron Lane – Portfolio</title>
+  <title>Projects – Aaron Lane</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1>Aaron Lane</h1>
     <nav>
       <a href="intro.html">Intro</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
       <a href="mailto:youremail@example.com">Contact</a>
     </nav>
   </header>
-<section class="projects-grid">
 
-  <!-- Project 1 -->
-  <a class="project-card" 
-     href="https://doi.org/10.1016/j.vaccine.2025.127677" 
-     target="_blank">
-    <img src="images/Vaccine_journal_screenshot.png" 
-         alt="Journal Article Thumbnail">
-    <h3>Long-Term Influenza Vaccine Responses</h3>
-    <p>First-author computational study on influenza vaccine response dynamics, published in <em>Vaccine</em> (2025).</p>
-  </a>
+  <section class="projects-grid">
+    <a class="project-card" href="https://doi.org/10.1016/j.vaccine.2025.127677" target="_blank">
+      <img src="images/Vaccine_journal_screenshot.png" alt="Journal Article Thumbnail">
+      <h3>Long-Term Influenza Vaccine Responses</h3>
+      <p>First-author computational study on influenza vaccine response dynamics, published in <em>Vaccine</em> (2025).</p>
+    </a>
 
- <!-- Project 2 -->
-  <a class="project-card" 
-     href="https://github.com/alane412/notebook-comment-translator" 
-     target="_blank">
-    <img src="images/notebook-comment-translator_thumbnail.png" 
-         alt="Project Two Thumbnail">
-    <h3>Jupyter Notebook Comment Translator</h3>
-    <p>Translate markdown cells and Python # comments in Jupyter notebooks, while leaving all code intact.</p>
-  </a>
+    <a class="project-card" href="https://github.com/alane412/notebook-comment-translator" target="_blank">
+      <img src="images/notebook-comment-translator_thumbnail.png" alt="Project Two Thumbnail">
+      <h3>Jupyter Notebook Comment Translator</h3>
+      <p>Translate markdown cells and Python # comments in Jupyter notebooks, while leaving all code intact.</p>
+    </a>
 
- <!-- Project 3 -->
-  <a class="project-card" 
-     href="https://github.com/alane412/influenza-gtrends-dashboard" 
-     target="_blank">
-    <img src="images/flu_dashboard_thumbnail.png" 
-         alt="Project Two Thumbnail">
-    <h3>Predicting Flu Cases with Google Search Trends</h3>
-    <p>Interactive dashboard that predicts the rates of influenza-like illness forward-in-time using trends in Google search data.</p>
-  </a>
-
-</section>
-
-
-
+    <a class="project-card" href="https://github.com/alane412/influenza-gtrends-dashboard" target="_blank">
+      <img src="images/flu_dashboard_thumbnail.png" alt="Flu Dashboard Thumbnail">
+      <h3>Predicting Flu Cases with Google Search Trends</h3>
+      <p>Interactive dashboard that predicts influenza-like illness rates using trends in Google search data.</p>
+    </a>
+  </section>
+</body>
+</html>
