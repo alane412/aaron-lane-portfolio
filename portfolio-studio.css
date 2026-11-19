@@ -16,8 +16,6 @@ main, footer { width: min(1152px, 92%); margin-inline: auto; }
 .section-title { justify-content: space-between; }
 .back { font-size: .9rem; text-decoration: none; font-weight: 600; }
 .back:hover { text-decoration: underline; }
-.skip { position: absolute; transform: translateY(-150%); background: white; z-index: 5; }
-.skip:focus { transform: none; }
 h1, h2, h3, p { margin: 0; }
 h1, h2, h3, .role { line-height: 1.06; letter-spacing: -.045em; }
 .hero { margin-top: clamp(16px, 3vw, 36px); display: grid; grid-template-columns: 1.35fr 1fr; background: var(--pine); color: white; border-radius: 22px; overflow: hidden; isolation: isolate; }
@@ -57,7 +55,8 @@ h2 { font-size: clamp(1.85rem, 3.5vw, 2.7rem); }
 .slide { display: grid; grid-template-columns: 1.65fr 1fr; margin: 0 0 15px; background: white; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
 [hidden] { display: none !important; }
 .screen, .project-image { background: #e3ece5; padding: clamp(10px,2vw,26px); }
-.screen img { width: 100%; height: min(62vw,580px); object-fit: contain; }
+.screen { min-width: 0; display: grid; align-items: center; }
+.screen video { display: block; width: 100%; max-height: 75vh; object-fit: contain; background: #111; }
 figcaption { padding: clamp(22px,3vw,40px); align-self: center; }
 figcaption h3 { font-size: clamp(1.5rem,3vw,2.45rem); }
 .project-image { margin-top: 24px; border-radius: 16px; }
@@ -72,7 +71,6 @@ figcaption h3 { font-size: clamp(1.5rem,3vw,2.45rem); }
   .portrait { height: clamp(200px,58vw,320px); }
   .portrait img { object-position: 50% 35%; }
   .section-title { flex-wrap: wrap; }
-  .screen img { height: auto; }
 }
 
 .grid {
