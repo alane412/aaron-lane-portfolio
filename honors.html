@@ -1,31 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Community College Honors Report Dashboard – Aaron Lane</title>
+  <title>Community College Honors Report Dashboard | Aaron Lane</title>
   <link rel="stylesheet" href="style.css">
+  <script src="walkthrough.js" defer></script>
 </head>
-<body class="walkthrough-page">
-  <main class="walkthrough">
-    <a href="index.html#projectsModal">← Back to projects</a>
-    <h1>Community College Honors Report Dashboard</h1>
-    <p>This Power BI report follows honors participation across the San Diego Community College District. Select a section to explore the report, or open a screenshot at full size.</p>
-    <details open>
-      <summary>Educators can find their specific programs</summary>
-      <p>The Headcount page filters by institution, subject, and course. This view shows how many City College students participated in honors in the selected subject each academic year.</p>
-      <a href="images/honors-headcount.png"><img src="images/honors-headcount.png" alt="City College headcount with the ARAB subject selected, showing annual honors participation."></a>
-    </details>
-    <details>
-      <summary>Going deeper to find trends</summary>
-      <p>The faculty view pairs instructor counts with each group’s share of honors contracts. Here, the two charts show how Mesa College contracts were distributed in 2024–2025.</p>
-      <a href="images/honors-faculty.png"><img loading="lazy" src="images/honors-faculty.png" alt="Two Mesa College bar charts comparing faculty counts and shares of honors contracts."></a>
-    </details>
-    <details>
-      <summary>Integrating transfer data from the National Student Clearinghouse</summary>
-      <p>The transfer page compares destinations for honors students and non-honors students who took honors-engaged courses. Selecting the UC system reveals the campus-level breakdown.</p>
-      <a href="images/honors-transfers.png"><img loading="lazy" src="images/honors-transfers.png" alt="Transfer destinations by college system with a table comparing honors and non-honors transfers to UC campuses."></a>
-    </details>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast"><a class="brand" href="index.html">Aaron Lane<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="resume_Aaron_Lane_.pdf">Résumé ↗</a></nav>
+  </header>
+  <main class="detail" id="main"><a class="back" href="index.html#projects">← All projects</a>
+    <section class="intro"><p class="meta">Power BI · Higher education</p><h1>Community College Honors Report Dashboard</h1><p class="lead">I built this Power BI report for the San Diego Community College District to help educators explore honors participation, faculty contracts, and transfer destinations.</p></section>
+    <section class="gallery" aria-label="Dashboard walkthrough" tabindex="0">
+      <div class="section-title"><h2>Report walkthrough</h2><div class="controls" hidden><button aria-label="Previous image">←</button><output aria-live="polite">1 / 3</output><button aria-label="Next image">→</button></div></div>
+      <figure class="slide"><div class="screen"><a href="images/honors-headcount.png" aria-label="Open full-size image: Find your program"><img src="images/honors-headcount.png" alt="Annual honors headcount for City College with ARAB selected."></a></div><figcaption><h3>Find your program</h3><p>Filter honors headcount by institution, subject, and course. Here, City College’s ARAB selection shows how many students participated each academic year.</p><a href="images/honors-headcount.png">View full size ↗</a></figcaption></figure>
+      <figure class="slide"><div class="screen"><a href="images/honors-faculty.png" aria-label="Open full-size image: Explore patterns across faculty"><img src="images/honors-faculty.png" alt="Paired bar charts showing faculty counts and shares of honors contracts."></a></div><figcaption><h3>Explore patterns across faculty</h3><p>At Mesa College in 2024–2025, compare how many instructors fall into each group with the share of honors contracts that group supported.</p><a href="images/honors-faculty.png">View full size ↗</a></figcaption></figure>
+      <figure class="slide"><div class="screen"><a href="images/honors-transfers.png" aria-label="Open full-size image: Follow transfer destinations"><img src="images/honors-transfers.png" alt="Transfer destinations by system and a campus-level breakdown for UC."></a></div><figcaption><h3>Follow transfer destinations</h3><p>National Student Clearinghouse data lets educators compare destinations for honors students and their non-honors peers in honors-engaged courses. The UC selection breaks transfers down by campus.</p><a href="images/honors-transfers.png">View full size ↗</a></figcaption></figure>
+    </section>
   </main>
+  <footer><a class="brand" href="index.html">Aaron Lane<span>.</span></a><a href="#main">Back to top ↑</a></footer>
 </body>
 </html>

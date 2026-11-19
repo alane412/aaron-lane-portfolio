@@ -1,94 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Aaron Lane – Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Aaron Lane</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
-<body class="landing-page">
-  <main class="landing-container">
-    <h1 class="landing-name">Aaron Lane</h1>
-    <p class="landing-tagline">Biologist • Data Analyst • Former Educator</p>
-
-    <div class="landing-links">
-      <button class="landing-btn" onclick="openModal('introModal')">Intro</button>
-      <button class="landing-btn" onclick="openModal('projectsModal')">Projects</button>
-      <button class="landing-btn" onclick="openModal('resumeModal')">Resume</button>
-    </div>
-  </main>
-
-  <!-- === Intro Modal === -->
-  <div id="introModal" class="modal">
-    <div class="modal-box">
-      <span class="close" onclick="closeModal('introModal')">&times;</span>
-      <img src="images/headshot.jpeg" alt="Photo of Aaron Lane" class="profile-photo">
-      <h2>About Me</h2>
-      <p>Hi, I’m Aaron — a bioinformatician and educator passionate about data. 
-         I build data pipelines, dashboards, and machine learning models to make data of all kinds more actionable.</p>
-      <p>Explore my recent work below or download my <a href="resume_Aaron_Lane_.pdf" target="_blank">resume</a>.</p>
-    </div>
-  </div>
-
-  <!-- === Projects Modal === -->
-  <div id="projectsModal" class="modal">
-    <div class="modal-box large">
-      <span class="close" onclick="closeModal('projectsModal')">&times;</span>
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <a class="project-card" href="honors.html">
-          <img src="images/honors-headcount.png" alt="">
-          <h3>Community College Honors Report Dashboard</h3>
-          <p>Explore honors participation, faculty contracts, and transfer destinations in a three-part Power BI walkthrough.</p>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast"><a class="brand" href="index.html">Aaron Lane<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="resume_Aaron_Lane_.pdf">Résumé ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-label="Introduction">
+      <div><p class="meta"><i></i> Biologist &amp; data analyst</p><h1>Aaron <em>Lane.</em></h1><p class="lead">I build data tools for questions in biology, public health, and education.</p><a class="button" href="#projects">Explore projects <span>↓</span></a></div>
+      <div class="portrait"><img src="images/headshot.jpeg" alt="Aaron Lane"></div>
+    </section>
+    <section id="projects"><div class="section-title"><h2>Selected projects</h2></div>
+      <div class="grid" id="projectsModal">
+        <a class="card honors" href="honors.html">
+          <div class="thumb"><img loading="lazy" src="images/honors-headcount.png" alt=""></div>
+          <div class="card-info"><span class="meta">Power BI · Higher education</span><h3>Community College Honors Report Dashboard</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
-        <a class="project-card" href="https://doi.org/10.1016/j.vaccine.2025.127677" target="_blank">
-          <img src="images/Vaccine_journal_screenshot.png" alt="Journal Article Thumbnail">
-          <h3>Long-Term Influenza Vaccine Responses</h3>
-          <p>First-author computational study on influenza vaccine response dynamics, published in <em>Vaccine</em> (2025).</p>
+        <a class="card vaccine" href="vaccine.html">
+          <div class="thumb"><img loading="lazy" src="images/Vaccine_journal_screenshot.png" alt=""></div>
+          <div class="card-info"><span class="meta">Research · Immunology</span><h3>Long-Term Influenza Vaccine Responses</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
-
-        <a class="project-card" href="https://github.com/alane412/influenza-gtrends-dashboard" target="_blank">
-          <img src="images/flu_dashboard_thumbnail.png" alt="Flu Dashboard Thumbnail">
-          <h3>Predicting Flu Cases with Google Search Trends</h3>
-          <p>Interactive dashboard predicting influenza-like illness rates using Google search data.</p>
+        <a class="card flu" href="flu.html">
+          <div class="thumb"><img loading="lazy" src="images/flu_dashboard_thumbnail.png" alt=""></div>
+          <div class="card-info"><span class="meta">Predictive analytics · Public health</span><h3>Predicting Flu Cases with Google Search Trends</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
-
-        <a class="project-card" href="https://github.com/alane412/notebook-comment-translator" target="_blank">
-          <img src="images/notebook-comment-translator_thumbnail.png" alt="Translator Thumbnail">
-          <h3>Jupyter Notebook Comment Translator</h3>
-          <p>Translate markdown cells and Python # comments in Jupyter notebooks while leaving code intact.</p>
+        <a class="card translator" href="translator.html">
+          <div class="thumb"><img loading="lazy" src="images/notebook-comment-translator_thumbnail.png" alt=""></div>
+          <div class="card-info"><span class="meta">Developer tools · Jupyter</span><h3>Jupyter Notebook Comment Translator</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
-
-        <!-- <a class="project-card" href="https://github.com/alane412/influenza-gtrends-dashboard" target="_blank">
-          <img src="images/flu_dashboard_thumbnail.png" alt="Flu Dashboard Thumbnail">
-          <h3>Predicting Flu Cases with Google Search Trends</h3>
-          <p>Interactive dashboard predicting influenza-like illness rates using Google search data.</p>
-        </a> -->
       </div>
-    </div>
-  </div>
-
-  <!-- === Resume Modal === -->
-  <div id="resumeModal" class="modal">
-    <div class="modal-box">
-      <span class="close" onclick="closeModal('resumeModal')">&times;</span>
-      <h2>Resume</h2>
-      <p>You can view my resume below or <a href="resume_Aaron_Lane_.pdf" target="_blank">download the PDF</a>.</p>
-      <iframe src="resume_Aaron_Lane_.pdf" class="resume-frame"></iframe>
-    </div>
-  </div>
-
-  <script>
-    if (location.hash === '#projectsModal') openModal('projectsModal');
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      modal.classList.add("show");
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.classList.remove("show");
-    }
-  </script>
+    </section>
+    <section id="about" class="about"><h2>About me</h2><div><p>I’m a biologist, data analyst, and former educator. My work spans bioinformatics, data pipelines, dashboards, and machine learning.</p><a href="resume_Aaron_Lane_.pdf">Read my résumé ↗</a></div></section>
+  </main>
+  <footer><a class="brand" href="index.html">Aaron Lane<span>.</span></a><a href="#main">Back to top ↑</a></footer>
 </body>
 </html>
