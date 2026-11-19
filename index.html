@@ -4,24 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Aaron Lane</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-studio.css?v=analytics">
 
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="mast"><a class="brand" href="index.html">Aaron Lane<span>.</span></a>
-    <nav aria-label="Main navigation"><a href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="resume_Aaron_Lane_.pdf">Résumé ↗</a></nav>
+  <header class="mast"><a class="brand" href="index.html"><span class="mark" aria-hidden="true">al</span>Aaron Lane</a>
+    <nav aria-label="Main navigation"><a href="index.html#projects">Projects</a><a href="index.html#resume">Résumé ↓</a></nav>
   </header>
   <main id="main">
     <section class="hero" aria-label="Introduction">
-      <div><p class="meta"><i></i> Biologist &amp; data analyst</p><h1>Aaron <em>Lane.</em></h1><p class="lead">I build data tools for questions in biology, public health, and education.</p><a class="button" href="#projects">Explore projects <span>↓</span></a></div>
-      <div class="portrait"><img src="images/headshot.jpeg" alt="Aaron Lane"></div>
+      <div class="hero-copy">
+        <h1>Aaron Lane</h1>
+        <p class="role">Data analyst &amp;<br>data scientist.</p>
+        <p class="lead">I turn complex datasets into reporting tools, statistical analyses, and predictive models using SQL, Python, and Power BI.</p>
+        <a class="button" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="portrait"><img src="images/aaron-portrait.webp" width="900" height="1200" style="max-width:100%;height:auto" alt="Aaron Lane"></div>
     </section>
     <section id="projects"><div class="section-title"><h2>Selected projects</h2></div>
-      <div class="grid" id="projectsModal">
+      <div class="grid" id="projectsModal" tabindex="0" role="region" aria-label="Projects">
         <a class="card honors" href="honors.html">
           <div class="thumb"><img loading="lazy" src="images/honors-headcount.png" alt=""></div>
           <div class="card-info"><span class="meta">Power BI · Higher education</span><h3>Community College Honors Report Dashboard</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="card persephone" href="persephone.html">
+          <div class="thumb package-cover" aria-hidden="true"><code>persephone_da<br><b>run_suite</b>()</code></div>
+          <div class="card-info"><span class="meta">Python · Microbiome analysis</span><h3>Persephone DA Toolkit</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
         <a class="card vaccine" href="vaccine.html">
           <div class="thumb"><img loading="lazy" src="images/Vaccine_journal_screenshot.png" alt=""></div>
@@ -31,14 +40,13 @@
           <div class="thumb"><img loading="lazy" src="images/flu_dashboard_thumbnail.png" alt=""></div>
           <div class="card-info"><span class="meta">Predictive analytics · Public health</span><h3>Predicting Flu Cases with Google Search Trends</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
         </a>
-        <a class="card translator" href="translator.html">
-          <div class="thumb"><img loading="lazy" src="images/notebook-comment-translator_thumbnail.png" alt=""></div>
-          <div class="card-info"><span class="meta">Developer tools · Jupyter</span><h3>Jupyter Notebook Comment Translator</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
-        </a>
       </div>
     </section>
-    <section id="about" class="about"><h2>About me</h2><div><p>I’m a biologist, data analyst, and former educator. My work spans bioinformatics, data pipelines, dashboards, and machine learning.</p><a href="resume_Aaron_Lane_.pdf">Read my résumé ↗</a></div></section>
+    <section id="resume" class="resume-panel">
+      <div><h2>Résumé</h2><p>M.S. in Biological Data Science. Experience in institutional reporting, microbiome analytics, and predictive modeling.</p></div>
+      <div class="resume-actions"><a class="button" href="Aaron-Lane-Resume.pdf" target="_blank" rel="noopener">View résumé ↗</a><a href="Aaron-Lane-Resume.pdf" download>Download PDF ↓</a></div>
+    </section>
   </main>
-  <footer><a class="brand" href="index.html">Aaron Lane<span>.</span></a><a href="#main">Back to top ↑</a></footer>
+  <footer><a class="brand" href="index.html"><span class="mark" aria-hidden="true">al</span>Aaron Lane</a><a href="#main">Back to top ↑</a></footer>
 </body>
 </html>
