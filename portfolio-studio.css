@@ -83,15 +83,10 @@ figcaption h3 { font-size: clamp(1.5rem,3vw,2.45rem); }
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
-.package-cover {
-  display: grid;
-  align-items: center;
-  padding: 18px;
-  background: #253e37;
-  color: white;
-}
-.package-cover code { font-size: clamp(1rem, 1.5vw, 1.4rem); }
-.package-cover b { color: var(--mint); }
+.package-cover { background: #dce7d9; }
+.abundance-figure { margin: 26px 0 0; padding: clamp(16px, 3vw, 32px); background: white; border: 1px solid var(--line); border-radius: 16px; }
+.abundance-figure img { width: min(100%, 829px); margin: auto; }
+.abundance-figure figcaption { max-width: 70ch; padding: 24px 0 0; margin: auto; }
 .card-info { padding: 16px; }
 .card-info .meta { padding-right: 12px; display: block; }
 .card h3 { font-size: clamp(1.2rem, 1.65vw, 1.5rem); }
