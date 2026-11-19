@@ -180,6 +180,43 @@ body {
 }
 
 /* ---- Animations ---- */
+.walkthrough-page {
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.walkthrough {
+  max-width: 1000px;
+  margin: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: white;
+  border-radius: 12px;
+  color: #26334b;
+  line-height: 1.55;
+}
+
+.walkthrough h1, .walkthrough a, .walkthrough summary {
+  color: #1f3c88;
+}
+
+.walkthrough details {
+  border-top: 1px solid #cbd4e5;
+  padding: 1rem 0;
+}
+
+.walkthrough summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.walkthrough img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

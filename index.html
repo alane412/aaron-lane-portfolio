@@ -36,6 +36,11 @@
       <span class="close" onclick="closeModal('projectsModal')">&times;</span>
       <h2>Projects</h2>
       <div class="projects-grid">
+        <a class="project-card" href="honors.html">
+          <img src="images/honors-headcount.png" alt="">
+          <h3>Community College Honors Report Dashboard</h3>
+          <p>Explore honors participation, faculty contracts, and transfer destinations in a three-part Power BI walkthrough.</p>
+        </a>
         <a class="project-card" href="https://doi.org/10.1016/j.vaccine.2025.127677" target="_blank">
           <img src="images/Vaccine_journal_screenshot.png" alt="Journal Article Thumbnail">
           <h3>Long-Term Influenza Vaccine Responses</h3>
@@ -74,6 +79,7 @@
   </div>
 
   <script>
+    if (location.hash === '#projectsModal') openModal('projectsModal');
     function openModal(id) {
       const modal = document.getElementById(id);
       modal.classList.add("show");
